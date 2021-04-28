@@ -1,5 +1,6 @@
 clu
 flax
+optax>=0.0.7
 ml_collections
 tensorboard
 tensorflow
