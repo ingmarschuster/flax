@@ -273,7 +273,7 @@ def train_step(state, inputs, labels):
     return loss
 
   loss, grads = jax.value_and_grad(loss_fn)(state.params)
-  new_state = state.update(grads=grads)
+  new_state = state.apply_gradients(grads=grads)
 
   return new_state, loss
 
